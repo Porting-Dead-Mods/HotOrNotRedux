@@ -30,7 +30,7 @@ public class HotOrNot {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> TABREGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static RegistryObject<Item> MITTS = ITEMS.register("mitttens", () -> new HonItem(1023));
+    public static RegistryObject<Item> MITTS = ITEMS.register("mittens", () -> new HonItem(1023));
     public static final RegistryObject<Item> WOODEN_TONGS = ITEMS.register("wooden_tongs", () -> new HonItem(127));
     public static final RegistryObject<Item> IRON_TONGS = ITEMS.register("iron_tongs", () -> new HonItem(511));
 

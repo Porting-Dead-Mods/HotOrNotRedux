@@ -1,0 +1,9 @@
+{
+  "item.hon.iron_tongs": "Iron Tongs",
+  "item.hon.mittens": "Mitts",
+  "item.hon.wooden_tongs": "Wooden Tongs",
+  "item_group.hon.hon": "Hot Or Not Tab",
+  "tooltip.hon.cold": "This Item feels Cold to the touch",
+  "tooltip.hon.hot": "This Item feels Hot to the touch",
+  "tooltip.hon.protectivegear": "This Item protects from negative effect from hot/cold items, put in offhand to use"
+}
