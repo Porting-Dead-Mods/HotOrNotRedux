@@ -25,6 +25,12 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .pattern("LLL")
                 .define('L', Items.LEATHER)
                 .unlockedBy(getHasName(Items.LEATHER),has(Items.LEATHER)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HotOrNot.RIGHT_HAND_MITTS.get())
+                .pattern("LLL")
+                .pattern("LL ")
+                .pattern("LLL")
+                .define('L', Items.LEATHER)
+                .unlockedBy(getHasName(Items.LEATHER),has(Items.LEATHER)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HotOrNot.WOODEN_TONGS.get())
                 .pattern("S S").pattern("S S").pattern(" S ")
                 .define('S', Items.STICK)

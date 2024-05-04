@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hon:item/mittens_left_hand"
+    "layer0": "hon:item/mittens_right_hand"
   }
 }

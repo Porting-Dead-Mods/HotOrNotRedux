@@ -13,10 +13,13 @@ public class LangEN_US extends LanguageProvider {
     protected void addTranslations() {
         add(HotOrNot.WOODEN_TONGS.get(), "Wooden Tongs");
         add(HotOrNot.IRON_TONGS.get(), "Iron Tongs");
-        add(HotOrNot.MITTS.get(), "Mitts");
+        add(HotOrNot.MITTS.get(), "Mittens");
+        add(HotOrNot.RIGHT_HAND_MITTS.get(), "Right Hand Mittens");
         add("tooltip.hon.cold", "This Item feels Cold to the touch");
         add("tooltip.hon.hot", "This Item feels Hot to the touch");
-        add("tooltip.hon.protectivegear", "This Item protects from negative effect from hot/cold items, put in offhand to use");
-        add("item_group.hon.hon", "Hot Or Not Tab");
+        add("tooltip.hon.protectivegear", "This Item protects from negative effect from hot/cold items, hold in offhand to use");
+        add("item_group.hon.hon", "Hot or Not Tab");
+        add("tooltip.hon.right_hand_mitten_inactive", "You only need this item if the bothHandMittens config is set to true");
+        add("tooltip.hon.right_hand_mitten_active", "This Item protects from negative effect from hot/cold items, hold in mainhand to use");
     }
 }
