@@ -10,7 +10,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,7 +29,8 @@ public class HotOrNot {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> TABREGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static RegistryObject<Item> MITTS = ITEMS.register("mitttens", () -> new HonItem(1023));
+    public static RegistryObject<Item> MITTS = ITEMS.register("mittens", () -> new HonItem(1023));
+    public static RegistryObject<Item> RIGHT_HAND_MITTS = ITEMS.register("right_hand_mittens", () -> new HonItem(1023));
     public static final RegistryObject<Item> WOODEN_TONGS = ITEMS.register("wooden_tongs", () -> new HonItem(127));
     public static final RegistryObject<Item> IRON_TONGS = ITEMS.register("iron_tongs", () -> new HonItem(511));
 
@@ -42,6 +42,7 @@ public class HotOrNot {
                     .displayItems((p,out) -> {
                             out.accept(Items.LAVA_BUCKET);
                             out.accept(Items.WATER_BUCKET);
+                            out.accept(RIGHT_HAND_MITTS.get());
                             out.accept(MITTS.get());
                             out.accept(WOODEN_TONGS.get());
                             out.accept(IRON_TONGS.get());

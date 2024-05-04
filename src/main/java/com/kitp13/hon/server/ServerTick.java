@@ -8,7 +8,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.TickEvent;
@@ -83,10 +82,23 @@ public class ServerTick {
     }
     static boolean playerUseProtectiveGear(Player player){
         ItemStack offhand = player.getOffhandItem();
-        if (offhand.getItem().equals(HotOrNot.MITTS.get())){
-            if(HonConfig.mittDamageable) offhand.hurtAndBreak(1,player, (e) -> e.broadcastBreakEvent(EquipmentSlot.OFFHAND));
-            return true;
-        } else if (offhand.getItem().equals(HotOrNot.WOODEN_TONGS.get())){
+        ItemStack mainhand = player.getMainHandItem();
+
+        if (HonConfig.bothHandsMitts) {
+            if (offhand.getItem().equals(HotOrNot.MITTS.get()) && mainhand.getItem().equals(HotOrNot.RIGHT_HAND_MITTS.get())) {
+                if(HonConfig.mittDamageable) {
+                    mainhand.hurtAndBreak(1, player, (e) -> e.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+                    offhand.hurtAndBreak(1, player, (e) -> e.broadcastBreakEvent(EquipmentSlot.OFFHAND));
+                }
+                return true;
+            }
+        } else {
+            if (offhand.getItem().equals(HotOrNot.MITTS.get())){
+                if(HonConfig.mittDamageable) offhand.hurtAndBreak(1,player, (e) -> e.broadcastBreakEvent(EquipmentSlot.OFFHAND));
+                return true;
+            }
+        }
+        if (offhand.getItem().equals(HotOrNot.WOODEN_TONGS.get())){
             if(HonConfig.woodenTongsDamageable) offhand.hurtAndBreak(1,player, (e) -> e.broadcastBreakEvent(EquipmentSlot.OFFHAND));
             return true;
         } else if (offhand.getItem().equals(HotOrNot.IRON_TONGS.get())){

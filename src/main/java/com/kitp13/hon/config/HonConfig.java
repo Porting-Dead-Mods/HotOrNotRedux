@@ -28,6 +28,9 @@ public class HonConfig {
     private static final ForgeConfigSpec.BooleanValue MITTS_TAKE_DAMAGE = BUILDER
             .comment("Whether Mitts take damage")
             .define("mittDamageable", true);
+    private static final ForgeConfigSpec.BooleanValue BOTH_HANDS_MITTS = BUILDER
+            .comment("Whether the player needs to have Mitts in both hands in order to not take damage")
+            .define("bothHandsMitts", false);
     private static final ForgeConfigSpec.BooleanValue WOODEN_TAKE_DAMAGE = BUILDER
             .comment("Whether Wooden Tongs take damage")
             .define("woodenTongsDamageable", true);
@@ -55,6 +58,7 @@ public class HonConfig {
     public static boolean woodenTongsDamageable;
     public static boolean ironTongsDamageable;
     public static boolean tooltips;
+    public static boolean bothHandsMitts;
 
     public static Set<Item> customHotItems;
     public static Set<Item> blacklistHotItems;
@@ -73,6 +77,7 @@ public class HonConfig {
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
+        bothHandsMitts = BOTH_HANDS_MITTS.get();
         tooltips = TOOLTIPS.get();
         coldThreshold = COLD_THRESHOLD.get();
         hotThreshold = HOT_THRESHOLD.get();

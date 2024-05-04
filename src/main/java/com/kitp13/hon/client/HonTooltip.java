@@ -24,8 +24,12 @@ public class HonTooltip {
         if (HonConfig.tooltips && !stack.isEmpty() && !HonConfig.blacklistColdItems.contains(stack.getItem()) && !HonConfig.blacklistHotItems.contains(stack.getItem())){
             LazyOptional<IFluidHandlerItem> fluidHandler1 = stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
             if (HonConfig.blacklistHotItems.contains(stack.getItem()) || HonConfig.blacklistColdItems.contains(stack.getItem())){
-            } else if (stack.getItem().equals(HotOrNot.MITTS.get())||stack.getItem().equals(HotOrNot.IRON_TONGS.get())||stack.getItem().equals(HotOrNot.WOODEN_TONGS.get())){
+            } else if (stack.getItem().equals(HotOrNot.MITTS.get()) || stack.getItem().equals(HotOrNot.IRON_TONGS.get()) || stack.getItem().equals(HotOrNot.WOODEN_TONGS.get())){
                 ProtectiveItem(event,stack);
+            } else if (stack.getItem().equals(HotOrNot.RIGHT_HAND_MITTS.get()) && HonConfig.bothHandsMitts) {
+                RightHandMittenActive(event, stack);
+            } else if (stack.getItem().equals(HotOrNot.RIGHT_HAND_MITTS.get()) && !HonConfig.bothHandsMitts) {
+                RightHandMittenInactive(event, stack);
             } else if (fluidHandler1.isPresent()) {
 
                 IFluidHandlerItem fluidHandlerItem = fluidHandler1.resolve().get();
@@ -53,6 +57,12 @@ public class HonTooltip {
     private static void ColdItem(ItemTooltipEvent event, ItemStack stack){
         event.getToolTip().add(Component.translatable(Tooltip.COLD.tooltip).withStyle(Style.EMPTY.withColor(Tooltip.COLD.color)));
     }
+    private static void RightHandMittenActive(ItemTooltipEvent event, ItemStack stack) {
+        event.getToolTip().add(Component.translatable(Tooltip.RIGHT_HAND_MITTEN_ACTIVE.tooltip).withStyle(Style.EMPTY.withColor(Tooltip.RIGHT_HAND_MITTEN_ACTIVE.color)));
+    }
+    private static void RightHandMittenInactive(ItemTooltipEvent event, ItemStack stack) {
+        event.getToolTip().add(Component.translatable(Tooltip.RIGHT_HAND_MITTEN_INACTIVE.tooltip).withStyle(Style.EMPTY.withColor(Tooltip.RIGHT_HAND_MITTEN_INACTIVE.color)));
+    }
     private static void ProtectiveItem(ItemTooltipEvent event, ItemStack stack) {
         event.getToolTip().add(Component.translatable(Tooltip.PROTECTIONITEM.tooltip).withStyle(Style.EMPTY.withColor(Tooltip.PROTECTIONITEM.color)));
     }
@@ -61,7 +71,10 @@ public class HonTooltip {
 
         COLD(TextColor.parseColor("#4085f5"), "tooltip.hon.cold"),
         HOT(TextColor.parseColor("#ff2121"), "tooltip.hon.hot"),
-        PROTECTIONITEM(TextColor.parseColor("#d4d404"), "tooltip.hon.protectivegear");
+        PROTECTIONITEM(TextColor.parseColor("#d4d404"), "tooltip.hon.protectivegear"),
+        RIGHT_HAND_MITTEN_INACTIVE(TextColor.parseColor("#c2b38a"), "tooltip.hon.right_hand_mitten_inactive"),
+        RIGHT_HAND_MITTEN_ACTIVE(TextColor.parseColor("#d4d404"), "tooltip.hon.right_hand_mitten_active");
+
         public final TextColor color;
         public final String tooltip;
         Tooltip(TextColor color, String tooltip) {
