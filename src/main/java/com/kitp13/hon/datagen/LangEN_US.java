@@ -20,6 +20,6 @@ public class LangEN_US extends LanguageProvider {
         add("tooltip.hon.protectivegear", "This Item protects from negative effect from hot/cold items, hold in offhand to use");
         add("item_group.hon.hon", "Hot or Not Tab");
         add("tooltip.hon.right_hand_mitten_inactive", "You only need this item if the bothHandMittens config is set to true");
-        add("tooltip.hon.right_hand_mitten_active", "This Item protects from negative effect from hot/cold items, hold in mainhand to use");
+        add("tooltip.hon.right_hand_mitten_active", "This Item protects from negative effect from hot/cold items, hold in mainhand to use. You also need the other mitten in your offhand");
     }
 }
