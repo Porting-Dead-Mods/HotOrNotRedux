@@ -1,6 +1,7 @@
 package com.kitp13.hon.datagen;
 
 import com.kitp13.hon.HotOrNot;
+import com.kitp13.hon.item.HonItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -17,14 +18,18 @@ public class ItemModel extends ItemModelProvider{
 
     @Override
     protected void registerModels() {
-        this.item(HotOrNot.WOODEN_TONGS);
-        this.item(HotOrNot.IRON_TONGS);
-        this.item(HotOrNot.MITTS);
+        this.item(HonItems.WOODEN_TONGS);
+        this.item(HonItems.IRON_TONGS);
+        this.item(HonItems.MITTS, "mittens_left_hand");
+        this.item(HonItems.RIGHT_HAND_MITTS, "mittens_right_hand");
     }
 
     private ItemModelBuilder item(RegistryObject<Item> item){
+        return item(item, item.getId().getPath());
+    }
+    private ItemModelBuilder item(RegistryObject<Item> item, String textureName){
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(HotOrNot.MODID, "item/" + item.getId().getPath()));
+                new ResourceLocation(HotOrNot.MODID, "item/" + textureName));
     }
 }
