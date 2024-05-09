@@ -1,6 +1,6 @@
-package com.kitp13.hon.utils;
+package com.portingdeadmods.hon.utils;
 
-import com.kitp13.hon.config.HonConfig;
+import com.portingdeadmods.hon.config.HonConfig;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;

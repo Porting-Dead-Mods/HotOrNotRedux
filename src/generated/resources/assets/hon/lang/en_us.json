@@ -1,4 +1,5 @@
 {
+  "enchantment.hon.thermal_protection": "Thermal Protection",
   "item.hon.iron_tongs": "Iron Tongs",
   "item.hon.mittens": "Mittens",
   "item.hon.right_hand_mittens": "Right Hand Mittens",
@@ -6,7 +7,8 @@
   "item_group.hon.hon": "Hot or Not Tab",
   "tooltip.hon.cold": "This Item feels Cold to the touch",
   "tooltip.hon.hot": "This Item feels Hot to the touch",
+  "tooltip.hon.protectiveenchant": "This Enchantmet protects the player from the effects of holding hot/cold items",
   "tooltip.hon.protectivegear": "This Item protects from negative effect from hot/cold items, hold in offhand to use",
-  "tooltip.hon.right_hand_mitten_inactive": "You only need this item if the bothHandMittens config is set to true",
-  "tooltip.hon.right_hand_mitten_active": "This Item protects from negative effect from hot/cold items, hold in mainhand to use"
+  "tooltip.hon.right_hand_mitten_active": "This Item protects from negative effect from hot/cold items, hold in mainhand to use. You also need the other mitten in your offhand",
+  "tooltip.hon.right_hand_mitten_inactive": "You only need this item if the bothHandMittens config is set to true"
 }
