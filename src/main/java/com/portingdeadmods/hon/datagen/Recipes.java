@@ -1,7 +1,6 @@
-package com.kitp13.hon.datagen;
+package com.portingdeadmods.hon.datagen;
 
-import com.kitp13.hon.HotOrNot;
-import com.kitp13.hon.item.HonItems;
+import com.portingdeadmods.hon.item.HonItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;

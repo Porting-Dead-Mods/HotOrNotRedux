@@ -1,11 +1,11 @@
-package com.kitp13.hon.server;
+package com.portingdeadmods.hon.server;
 
-import com.kitp13.hon.HotOrNot;
-import com.kitp13.hon.config.HonConfig;
-import com.kitp13.hon.enchant.HonEnchants;
-import com.kitp13.hon.item.HonItems;
-import com.kitp13.hon.utils.Item;
-import com.kitp13.hon.utils.Temperature;
+import com.portingdeadmods.hon.HotOrNot;
+import com.portingdeadmods.hon.config.HonConfig;
+import com.portingdeadmods.hon.enchant.HonEnchants;
+import com.portingdeadmods.hon.item.HonItems;
+import com.portingdeadmods.hon.utils.Item;
+import com.portingdeadmods.hon.utils.Temperature;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;

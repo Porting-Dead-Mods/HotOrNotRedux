@@ -1,6 +1,6 @@
-package com.kitp13.hon.item;
+package com.portingdeadmods.hon.item;
 
-import com.kitp13.hon.HotOrNot;
+import com.portingdeadmods.hon.HotOrNot;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

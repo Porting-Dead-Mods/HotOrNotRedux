@@ -1,4 +1,4 @@
-package com.kitp13.hon.enchant;
+package com.portingdeadmods.hon.enchant;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;

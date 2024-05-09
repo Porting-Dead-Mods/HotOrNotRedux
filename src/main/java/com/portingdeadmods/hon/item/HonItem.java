@@ -1,4 +1,4 @@
-package com.kitp13.hon.item;
+package com.portingdeadmods.hon.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;

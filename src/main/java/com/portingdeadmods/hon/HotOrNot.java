@@ -1,20 +1,15 @@
-package com.kitp13.hon;
+package com.portingdeadmods.hon;
 
-import com.kitp13.hon.config.HonConfig;
-import com.kitp13.hon.enchant.HonEnchants;
-import com.kitp13.hon.item.HonItems;
-import com.kitp13.hon.tab.HonTab;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.*;
+import com.portingdeadmods.hon.config.HonConfig;
+import com.portingdeadmods.hon.enchant.HonEnchants;
+import com.portingdeadmods.hon.item.HonItems;
+import com.portingdeadmods.hon.tab.HonTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

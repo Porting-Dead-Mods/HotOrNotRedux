@@ -1,6 +1,6 @@
-package com.kitp13.hon.config;
+package com.portingdeadmods.hon.config;
 
-import com.kitp13.hon.HotOrNot;
+import com.portingdeadmods.hon.HotOrNot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec;

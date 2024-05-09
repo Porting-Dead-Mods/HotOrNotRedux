@@ -1,4 +1,4 @@
-package com.kitp13.hon.utils;
+package com.portingdeadmods.hon.utils;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;

@@ -1,7 +1,7 @@
-package com.kitp13.hon.tab;
+package com.portingdeadmods.hon.tab;
 
-import com.kitp13.hon.HotOrNot;
-import com.kitp13.hon.item.HonItems;
+import com.portingdeadmods.hon.HotOrNot;
+import com.portingdeadmods.hon.item.HonItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

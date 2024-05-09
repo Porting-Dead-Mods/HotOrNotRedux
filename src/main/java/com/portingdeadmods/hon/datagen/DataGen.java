@@ -1,6 +1,6 @@
-package com.kitp13.hon.datagen;
+package com.portingdeadmods.hon.datagen;
 
-import com.kitp13.hon.HotOrNot;
+import com.portingdeadmods.hon.HotOrNot;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

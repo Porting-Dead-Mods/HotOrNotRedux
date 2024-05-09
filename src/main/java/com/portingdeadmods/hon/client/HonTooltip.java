@@ -1,11 +1,11 @@
-package com.kitp13.hon.client;
+package com.portingdeadmods.hon.client;
 
-import com.kitp13.hon.HotOrNot;
-import com.kitp13.hon.config.HonConfig;
-import com.kitp13.hon.enchant.HonEnchants;
-import com.kitp13.hon.item.HonItems;
-import com.kitp13.hon.utils.Item;
-import com.kitp13.hon.utils.Temperature;
+import com.portingdeadmods.hon.HotOrNot;
+import com.portingdeadmods.hon.config.HonConfig;
+import com.portingdeadmods.hon.enchant.HonEnchants;
+import com.portingdeadmods.hon.item.HonItems;
+import com.portingdeadmods.hon.utils.Item;
+import com.portingdeadmods.hon.utils.Temperature;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
